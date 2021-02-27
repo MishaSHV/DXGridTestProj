@@ -51,12 +51,9 @@
                 <dxb:BarButtonItem x:Name="printItem" Content="Print" Glyph="{dx:DXImage SvgImages/Print/Print.svg}"/>
             </dxr:RibbonStatusBarControl.RightItems>
         </dxr:RibbonStatusBarControl>
-        <dxg:GridControl AutoGenerateColumns="AddNew" 
-                         EnableSmartColumnsGeneration="True"
-                         x:Name="mainGridControl" ItemsSource="{Binding Employees}">
-            <dxg:GridControl.View>
-                <dxg:TableView ShowTotalSummary="True"/>
-            </dxg:GridControl.View>
+        <dxg:GridControl  x:Name="mainGridControl" 
+                          ItemsSource="{Binding Employees}" 
+                          View="{StaticResource myTreeListView}">
             <dxg:GridColumn FieldName="EmployeeID" IsSmart="True"/>
             <dxg:GridColumn FieldName="ReportsTo" IsSmart="True"/>
             <dxg:GridColumn FieldName="FirstName" IsSmart="True"/>
