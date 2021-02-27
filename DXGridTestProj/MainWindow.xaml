@@ -50,23 +50,14 @@
                 <dxg:TableView ShowTotalSummary="True"/>
             </dxg:GridControl.View>
             <dxg:GridColumn FieldName="EmployeeID" IsSmart="True"/>
-            <dxg:GridColumn FieldName="LastName" IsSmart="True"/>
+            <dxg:GridColumn FieldName="ReportsTo" IsSmart="True"/>
             <dxg:GridColumn FieldName="FirstName" IsSmart="True"/>
+            <dxg:GridColumn FieldName="LastName" IsSmart="True"/>
             <dxg:GridColumn FieldName="Title" IsSmart="True"/>
             <dxg:GridColumn FieldName="TitleOfCourtesy" IsSmart="True"/>
             <dxg:GridColumn FieldName="BirthDate" IsSmart="True"/>
             <dxg:GridColumn FieldName="HireDate" IsSmart="True"/>
-            <dxg:GridColumn FieldName="Address" IsSmart="True"/>
-            <dxg:GridColumn FieldName="City" IsSmart="True"/>
-            <dxg:GridColumn FieldName="Region" IsSmart="True"/>
-            <dxg:GridColumn FieldName="PostalCode" IsSmart="True"/>
-            <dxg:GridColumn FieldName="Country" IsSmart="True"/>
             <dxg:GridColumn FieldName="HomePhone" IsSmart="True"/>
-            <dxg:GridColumn FieldName="Extension" IsSmart="True"/>
-            <dxg:GridColumn FieldName="Notes" IsSmart="True"/>
-            <dxg:GridColumn FieldName="ReportsTo" IsSmart="True"/>
-            <dxg:GridColumn FieldName="PhotoPath" IsSmart="True"/>
-            <dxg:GridColumn FieldName="Employee1" IsSmart="True"/>
         </dxg:GridControl>
     </DockPanel>
 </dx:ThemedWindow>
