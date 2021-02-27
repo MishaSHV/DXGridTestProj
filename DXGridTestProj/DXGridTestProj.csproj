@@ -80,6 +80,7 @@
     <Compile Include="Employee.cs">
       <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ExportFileType.cs" />
     <Compile Include="NorthwindModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -53,7 +53,8 @@
         </dxr:RibbonStatusBarControl>
         <dxg:GridControl  x:Name="mainGridControl" 
                           ItemsSource="{Binding Employees}" 
-                          View="{StaticResource myTreeListView}">
+                          View="{StaticResource myTreeListView}"
+                          SelectionMode="Row">
             <dxg:GridColumn FieldName="EmployeeID" IsSmart="True"/>
             <dxg:GridColumn FieldName="ReportsTo" IsSmart="True"/>
             <dxg:GridColumn FieldName="FirstName" IsSmart="True"/>
