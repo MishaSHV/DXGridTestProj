@@ -63,6 +63,12 @@
             <dxg:GridColumn FieldName="BirthDate" IsSmart="True"/>
             <dxg:GridColumn FieldName="HireDate" IsSmart="True"/>
             <dxg:GridColumn FieldName="HomePhone" IsSmart="True"/>
+            <dxg:GridControl.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Export to txt" Click="MenuItemTxt_Click" />
+                    <MenuItem Header="Export to csv" Click="MenuItemCsv_Click" />
+                </ContextMenu>
+            </dxg:GridControl.ContextMenu>
         </dxg:GridControl>
     </DockPanel>
 </dx:ThemedWindow>
