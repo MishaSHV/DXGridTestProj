@@ -24,5 +24,10 @@ namespace DXGridTestProj
         {
             InitializeComponent();
         }
+
+        private void printPrewiewItem_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+            mainGridControl.View.ShowPrintPreview(this);
+        }
     }
 }
