@@ -39,6 +39,9 @@
                     </dxr:RibbonPageGroup>
                     <dxr:RibbonPageGroup Caption="Print Preview">
                         <dxb:BarButtonItem ItemClick="printPrewiewItem_ItemClick" x:Name="printPrewiewItem" Content="Print Preview" LargeGlyph="{dx:DXImage SvgImages/Print/Print.svg}"/>
+                        <dxb:BarButtonItem x:Name="treeListViewItem" Content="Tree List View" Tag="myTreeListView" ItemClick="treeListViewItem_ItemClick"/>
+                        <dxb:BarButtonItem x:Name="tableListViewItem" Content="Table List View" Tag="myTableView" ItemClick="treeListViewItem_ItemClick"/>
+                        <dxb:BarButtonItem x:Name="cardListViewItem" Content="Card List View" Tag="myCardView" ItemClick="treeListViewItem_ItemClick" />
                     </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
             </dxr:RibbonDefaultPageCategory>
