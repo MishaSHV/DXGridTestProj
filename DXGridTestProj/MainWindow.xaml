@@ -5,9 +5,12 @@
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
     xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
-    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+    xmlns:local="clr-namespace:DXGridTestProj" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
     x:Class="DXGridTestProj.MainWindow"
     Title="MainWindow" Height="800" Width="1000">
+    <dx:ThemedWindow.DataContext>
+        <local:ViewModel/>
+    </dx:ThemedWindow.DataContext>
     <DockPanel>
         <dxr:RibbonControl DockPanel.Dock="Top" RibbonStyle="Office2019">
             <dxr:RibbonControl.ToolbarItems>
@@ -29,6 +32,9 @@
                         <dxb:BarItemSeparator/>
                         <dxb:BarButtonItem x:Name="saveAsItem" Content="Save As" LargeGlyph="{dx:DXImage SvgImages/Save/SaveAs.svg}"/>
                     </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Caption="Print Preview">
+                        <dxb:BarButtonItem ItemClick="printPrewiewItem_ItemClick" x:Name="printPrewiewItem" Content="Print Preview" LargeGlyph="{dx:DXImage SvgImages/Print/Print.svg}"/>
+                    </dxr:RibbonPageGroup>
                 </dxr:RibbonPage>
             </dxr:RibbonDefaultPageCategory>
         </dxr:RibbonControl>
@@ -37,10 +43,30 @@
                 <dxb:BarButtonItem x:Name="printItem" Content="Print" Glyph="{dx:DXImage SvgImages/Print/Print.svg}"/>
             </dxr:RibbonStatusBarControl.RightItems>
         </dxr:RibbonStatusBarControl>
-        <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
+        <dxg:GridControl AutoGenerateColumns="AddNew" 
+                         EnableSmartColumnsGeneration="True"
+                         x:Name="mainGridControl" ItemsSource="{Binding Employees}">
             <dxg:GridControl.View>
                 <dxg:TableView ShowTotalSummary="True"/>
             </dxg:GridControl.View>
+            <dxg:GridColumn FieldName="EmployeeID" IsSmart="True"/>
+            <dxg:GridColumn FieldName="LastName" IsSmart="True"/>
+            <dxg:GridColumn FieldName="FirstName" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Title" IsSmart="True"/>
+            <dxg:GridColumn FieldName="TitleOfCourtesy" IsSmart="True"/>
+            <dxg:GridColumn FieldName="BirthDate" IsSmart="True"/>
+            <dxg:GridColumn FieldName="HireDate" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Address" IsSmart="True"/>
+            <dxg:GridColumn FieldName="City" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Region" IsSmart="True"/>
+            <dxg:GridColumn FieldName="PostalCode" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Country" IsSmart="True"/>
+            <dxg:GridColumn FieldName="HomePhone" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Extension" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Notes" IsSmart="True"/>
+            <dxg:GridColumn FieldName="ReportsTo" IsSmart="True"/>
+            <dxg:GridColumn FieldName="PhotoPath" IsSmart="True"/>
+            <dxg:GridColumn FieldName="Employee1" IsSmart="True"/>
         </dxg:GridControl>
     </DockPanel>
 </dx:ThemedWindow>
